@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(fontes/RubikDoodleShadow-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'main';
+    src: url(fontes/Caveat-VariableFont_wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    margin:0px;
+    background-image: url(imagens/papel-de-parede-listrado-cinza-e-branco-tom-neutro.jpg);
+}
+
+header{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+header a{
+    text-decoration:none;
+    font-weight: bold;
+    color: white;
+
+}
+header a:hover{
+    text-decoration: underline;
+}
+header > h1{
+    padding-top: 30px;
+    font-size: 5vh;
+    font-variant: small-caps;
+    font-family: 'Rubik';
+}
+header > h2{
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 2.5vh;
+}
+
+main{
+    background-color: white;
+    font-family: 'main';
+    max-width: 1200px;
+    min-width: 200px;
+    margin: 10px auto;
+    padding: 0px 10px;
+    font-size: 2.5vh;
+    border: 2px solid rgb(132, 132, 132);
+    border-radius: 10px;
+}
+section {
+    position: relative;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    line-height: 2em;
+}
+#normal{
+    margin-left: 2vw;
+}
+#normal>p{
+    margin-top: 2vh;
+}
+.imagem{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 5vh 2% 5vh 5%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: inset 0px 0 6px 1px rgba(0, 0, 0, 0.725);
+}
+#image-1{
+    background-image: url(imagens/background001.jpg);
+}
+#image-1 > p{
+    color: white;
+    border-radius: 10px;
+    width: 30vh;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.508);
+}
+
+#image-2{
+    background-image: url(imagens/background002.jpg);
+}
+
+#image-2 > p{
+    color: white;
+    border-radius: 10px;
+    width: 30vh;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.508);
+}
+
+#lapis{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 50%;
+    transform: translate(0%, 50%);
+}
+footer{
+    background-color: black;
+    text-align: center;
+}
+footer > p{
+    padding: 20px;
+    font-size: 2vh;
+    color: white;
+}
+
