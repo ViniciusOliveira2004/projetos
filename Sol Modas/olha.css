@@ -1,0 +1,37 @@
+
+header h1, header #menu, header #conta, header #sol{
+    font-size: 6vw;
+}
+aside h2, footer h2, #sec1 h2, #sec2 h2{
+    font-size: 4vw;
+}
+main > section a, #sec1 a{
+    font-size: 2.5vw;
+    padding: 4vh;
+}
+
+#sec1{
+    height: 60vh;
+    max-height: 60vh;
+    min-height: 200px;
+}
+#sec1 div > p{
+    font-size: 2.2vw;
+}
+aside{
+    height: 80vh;
+    max-height: 80vh;
+    min-height: 200px;
+}
+footer h2{
+    font-size: 4vw;
+}
+footer li{
+    font-size: 3vw;
+}
+footer img{
+    width: 3vw;
+}
+header #div-bar > span{
+    font-size: 3vw;
+}
