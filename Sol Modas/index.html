@@ -13,20 +13,31 @@
 <body>
     <header>
         <div>
-            <span class="material-symbols-outlined" id="menu">menu</span>
+            <span class="material-symbols-outlined" id="menu" onclick="ClicouMenu()">menu</span>
             <h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1>
-            <nav>
-                <a href="">Home</a>
-                <a href="">Produtos</a>
-                <a href="">Sobre nós</a>
-                <a href="">Fale Conosco</a>
-            </nav>
             <span class="material-symbols-outlined" id="conta">account_circle</span>
         </div>
         <div id="div-bar">
             <input type="text" name="procura" id="bar" placeholder=" O que procura?">
             <span class="material-symbols-outlined">search</span>
         </div>
+        <div id="div-nav">
+            <nav id="Nav">
+                <a href="#" onclick="ClicouProdutos()">Produtos</a>
+                <nav id="produtos2" >
+                    <a href="">Vestidos</a>
+                    <a href="">Blusas</a>
+                    <a href="">Calças</a>
+                    <a href="">Bermudas</a>
+                </nav>
+                <a href="">Sobre nós</a>
+                <a href="">Fale Conosco</a>
+                <a href="" id="login">Login <span class="material-symbols-outlined">account_circle</span></a>
+            </nav>
+            <span class="material-symbols-outlined" id="X">cancel</span>
+            <div id="fundo" onclick="ClicouMenu()"></div>
+        </div>
+        
     </header>
     <main>
         <section id="sec1">
@@ -81,5 +92,7 @@
             </ul>
         </section>
     </footer>
+    
 </body>
+<script src="script.js"></script>
 </html>

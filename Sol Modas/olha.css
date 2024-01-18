@@ -7,7 +7,7 @@ aside h2, footer h2, #sec1 h2, #sec2 h2{
 }
 main > section a, #sec1 a{
     font-size: 2.5vw;
-    padding: 4vh;
+    padding: 2vw;
 }
 
 #sec1{
@@ -15,13 +15,23 @@ main > section a, #sec1 a{
     max-height: 60vh;
     min-height: 200px;
 }
+#sec1 > div{
+    width: 55%;
+}
 #sec1 div > p{
     font-size: 2.2vw;
 }
 aside{
-    height: 80vh;
+    height: 40vw;
     max-height: 80vh;
     min-height: 200px;
+}
+aside > div{
+    min-height: 180px;
+    max-height: 210px;
+}
+aside li{
+    font-size: 2.5vw;
 }
 footer h2{
     font-size: 4vw;
