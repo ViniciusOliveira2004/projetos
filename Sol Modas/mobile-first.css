@@ -28,6 +28,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    list-style-position: inside;
 }
 body.html{
     height: 100vh;
@@ -37,14 +38,20 @@ body.html{
 header{
     color: var(--cor5);
     background-color: var(--cor2);
-    height: 8vh;
     padding: 10px;
+    border-bottom: 2px solid var(--cor3);
+}
+header > div{
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--cor3);
-    justify-content: space-between;
+    justify-content:space-between;
 }
-header > h1 {
+header input{
+    margin: 20px;
+    display: block;
+    text-align: center;
+}
+header h1 {
     font-family: 'Corpo';
     font-size: 5vh;
     display: flex;
@@ -169,7 +176,7 @@ section a:hover{
     margin: auto;
 }
 .produto{
-    flex: 1 1 250px;
+    flex: 1 1 300px;
     margin: 20px;
     background-color: #F5D6A1;
     max-width: 60vw;
@@ -207,6 +214,9 @@ aside{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.51);
     margin: 20px auto;
 }
+aside li{
+    margin-top: 10px;
+}
 aside > div{
     padding: 20px;
     border-radius: 20px 5px;
@@ -224,17 +234,36 @@ h2{
 }
 /* FOOTER ==============================================================================================*/
 footer{
-    text-align: center;
-    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
+    color: var(--cor5);
+    background-color: var(--cor2);
 }
 footer h2{
     text-align: center;
-    margin: 10px auto;
+    font-size: 2.5vh;
+}
+footer li{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: flex-start;
+    font-size: 1.5vh;
+}
+footer img{
+    width: 1em;
+    margin: 5px
 }
 footer section{
+    border: 4px solid var(--cor5);
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1 1 6vh;
     text-align: left;
     list-style-position: inside;
-    margin: 0px 40px;
-    display: inline-block;
+    margin: 2%;
+    width: 60%;
 }
