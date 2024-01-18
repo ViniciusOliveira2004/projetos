@@ -254,7 +254,7 @@ footer li{
     font-size: 1.5vh;
 }
 footer img{
-    width: 1em;
+    width: 1.5vh;
     margin: 5px
 }
 footer section{
@@ -265,5 +265,5 @@ footer section{
     text-align: left;
     list-style-position: inside;
     margin: 2%;
-    width: 60%;
+    width: 80%;
 }
