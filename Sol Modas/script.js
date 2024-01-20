@@ -1,22 +1,30 @@
 function ClicouMenu(){
-    let divnav = document.getElementById('div-nav');
-    let nav = document.getElementById('Nav');
+    let navegar = document.getElementById('Nav')
     let fundo = document.getElementById('fundo')
-    if(divnav.style.display == "flex"){
-        divnav.style.display = "none";
-        nav.style.display = "none";
-        fundo.style.backgroundColor = "rgba(0, 0, 0, 0)"
+    let p = document.getElementById('produtos2')
+    var windowWidth = Number(window.innerWidth);
+    var windowHeight = Number(window.innerHeight);
+    if(navegar.style.width > '0vw'){
+        p.style.maxHeight = '0vh'
+        navegar.style.width = '0vw'
+        fundo.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+        fundo.style.width = '0vw'
+
     } else{
-        divnav.style.display = "flex";
-        nav.style.display = "inline-block";
-        fundo.style.backgroundColor = "rgba(0, 0, 0, 0.400)"
+        if(windowHeight < windowWidth){
+            navegar.style.width = '80vh';
+        } else{
+            navegar.style.width = '50vw';
+        }
+        fundo.style.backgroundColor = 'rgba(0, 0, 0, 0.400)'
+        fundo.style.width = '100vw'
     }
 }
 function ClicouProdutos(){
-    let p = document.getElementById('produtos2');
-    if(p.style.display == "block"){
-        p.style.display = "none";
+    let p = document.getElementById('produtos2')
+    if(p.style.maxHeight == '0vh'){
+        p.style.maxHeight = '100vh';
     } else{
-        p.style.display = "block";
+        p.style.maxHeight = '0vh'
     }
 }

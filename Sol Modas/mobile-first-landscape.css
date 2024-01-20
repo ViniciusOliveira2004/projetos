@@ -2,6 +2,15 @@
 header h1, header #menu, header #conta, header #sol{
     font-size: 6vw;
 }
+header nav a{
+    font-size: 3vw;
+}
+header nav #produtos2 a{
+    font-size: 2vw;
+}
+header nav #login span{
+    font-size: 3vw;
+}
 aside h2, footer h2, #sec1 h2, #sec2 h2{
     font-size: 4vw;
 }
