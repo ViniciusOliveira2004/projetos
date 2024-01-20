@@ -22,7 +22,7 @@
     --cor4: #66481F;
     --cor5: #4A2E07;
     --tr1: rgba(0, 0, 0, 0);
-    --tr2: rgba(0, 0, 0, 0.371);
+    --tr2: #9a723b;
 }
 *{
     padding: 0px;
@@ -57,7 +57,7 @@ header > #div-bar{
     border-radius: 10px;
     padding: 5px;
     width: 70%;
-    height: 10%;
+    height: 5%;
     margin: 5px auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.559);
 }
@@ -69,15 +69,19 @@ header #div-bar > span{
 }
 header input{
     width: 85%;
-    font-size: 90%;
+    font-size: 1em;
     padding: 2px;
     border-radius: 5px;
 }
 header h1 {
     font-family: 'Corpo';
     font-size: 5vh;
+    color: var(--cor5);
     display: flex;
     align-items: center;
+}
+header a{
+    text-decoration: none;
 }
 header #sol {
     font-size: 5vh;
@@ -94,6 +98,7 @@ header #conta{
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
+    color: var(--cor5);
 }
 header #conta:hover{
     background-color: var(--cor3);
@@ -115,6 +120,7 @@ header #Nav{
     overflow-y:auto;
     padding-top: 20px;
     position: fixed;
+    border-right: 2px solid var(--cor4);
     background-color: var(--cor1);
 }
 header nav a{
@@ -164,7 +170,7 @@ header nav #login:hover{
 header #produtos2{
     white-space:nowrap;
     overflow-y: hidden;
-    transition: all 0.3s;
+    transition: all 0.5s;
     max-height: 0vh;
 }
 #produtos2 > a{
@@ -173,7 +179,7 @@ header #produtos2{
     padding: 10px;
     text-decoration: none;
     font-size: 3vh;
-    transition: all 0.3s;
+    transition: all 0.5s;
     width: 70%;
     height: 5vh;
     margin-top: 2.5vh;
@@ -181,6 +187,17 @@ header #produtos2{
     color: var(--cor5);
     border-radius: 10px;
     border: 2px solid var(--cor2);
+}
+#Nav #left{
+    border-radius: 50%;
+    position: absolute;
+    padding: 2%;
+    margin: 0px 5%;
+    right: 0%;
+    font-size: 2.5vh;
+    transform: rotate(-90deg);
+    transition: 0.2s;
+    color: var(--cor4);
 }
 #X{
     position: relative;
@@ -219,7 +236,7 @@ section a:hover{
     align-items: center;
     justify-content: center;
     height: 40vh;
-    background-image: url(images/background2.jpeg);
+    background-image: url(../../images/background2.jpeg);
     background-size: cover;
     background-position: center center;
     font-family: var(--font2);
@@ -240,6 +257,7 @@ section a:hover{
     position: relative;
     padding: 1.5vh;
     margin-top: 10px;
+    font-size: 2vh;
     display: inline-block;
 }
 #sec1 h2{
@@ -248,7 +266,7 @@ section a:hover{
 #sec1 p{
     text-align: center;
     font-weight: normal;
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 /* SEÇÃO 2 ==============================================================================================*/
 #sec2{
@@ -263,7 +281,8 @@ section a:hover{
     margin: 10px auto;
     text-align: center;
     display: block;
-    max-width: 240px;
+    font-size: 2vh;
+    max-width: 200px;
 }
 #vendidos{
     display: flex;
@@ -301,11 +320,12 @@ aside{
     height: 40vh;
     padding: 20px;
     width: 95vw;
+    min-width: 250px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right, var(--cor3) 1%, rgba(255, 255, 255, 0)), url(images/loja-foto.jpeg);
+    background-image: linear-gradient(to right, var(--cor3) 1%, rgba(255, 255, 255, 0)), url(../../images/loja-foto.jpeg);
     background-repeat: no-repeat;
     background-position: center right;
     background-size:cover;
@@ -347,7 +367,7 @@ footer{
 footer h2{
     font-weight: normal;
     text-align: center;
-    font-size: 3vh;
+    font-size: 5vw;
 }
 footer #insta{
     color: #ffffff;
@@ -363,7 +383,7 @@ footer li{
     align-items: center;
     margin-top: 5px;
     justify-content: flex-start;
-    font-size: 2.2vh;
+    font-size: 4vw;
 }
 footer img{
     width: 2.2vh;
@@ -378,5 +398,92 @@ footer section{
     text-align: left;
     list-style-position: inside;
     margin: 2%;
+    min-width: 250px;
     width: 80%;
+}
+@media screen and (orientation: landscape) {
+    header h1, header #menu, header #conta, header #sol{
+        font-size: 7vw;
+    }
+    header nav a{
+        font-size: 3vw;
+        height: 6vw;
+    }
+    header #div-bar > span{
+        font-size: 3vw;
+    }
+    header #div-bar{
+        width: 60%;
+    }
+    header nav #produtos2 a{
+        font-size: 3vw;
+        height: 5vw;
+    }
+    header nav #login {
+        height: 8vw;
+    }
+    header nav #login span{
+        font-size: 4vw;
+    }
+    #Nav #left{
+        font-size: 2.5vw;
+    }
+    aside h2, footer h2, #sec1 h2, #sec2 h2{
+        font-size: 4vw;
+    }
+    main > section a, #sec1 a{
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+
+    #sec1{
+        height: 70vh;
+        min-height: 200px;
+    }
+    #sec1 > div{
+        width: 50%;
+        height: 60%;
+        max-height: 250px;
+        min-height: 180px;
+    }
+    #sec1 div > p{
+        font-size: 3.5vw;
+    }
+    #sec1 div > h2{
+        font-size: 5vw;
+    }
+    #sec1 a{
+        font-size: 2vw;
+    }
+    #sec2 h2{
+        font-size: 6vw;
+    }
+    #sec2 a{
+        font-size: 2vw;
+    }
+    aside{
+        height: 40vw;
+        max-height: 80vh;
+        min-height: 200px;
+    }
+    aside > div{
+        min-height: 180px;
+        max-height: 210px;
+    }
+    aside li{
+        font-size: 2.5vw;
+    }
+    footer #call{
+        font-size: 3vw;
+    }
+    footer h2{
+        font-size: 4vw;
+    }
+    footer li{
+        font-size: 3vw;
+    }
+    footer img{
+        width: 3vw;
+    }
+    
 }

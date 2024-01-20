@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mobile-first.css" media="screen">
-    <link rel="stylesheet" href="mobile-first-landscape.css" media="screen and (orientation: landscape)">
-    <link rel="stylesheet" href="medium.css" media="screen and (min-width: 600px) and (max-width: 768px)">
+    <link rel="stylesheet" href="estilos/mobile-first/mobile-first.css" media="screen">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Sol Modas - Juatuba</title>
@@ -16,7 +14,7 @@
         <div>
             <span class="material-symbols-outlined" id="menu" onclick="ClicouMenu()">menu</span>
             <h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1>
-            <span class="material-symbols-outlined" id="conta">account_circle</span>
+            <a href="login.html"><span class="material-symbols-outlined" id="conta">account_circle</span></a>
         </div>
         <div id="div-bar">
             <input type="text" name="procura" id="bar" placeholder=" O que procura?">
@@ -24,7 +22,7 @@
         </div>
         <nav id="Nav">
             <div>
-                <a href="#" onclick="ClicouProdutos()">Produtos</a>
+                <a href="#" onclick="ClicouProdutos()">Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
                 <nav id="produtos2" >
                     <a href="">Vestidos</a>
                     <a href="">Blusas</a>
@@ -34,7 +32,7 @@
                 <a href="">Sobre nós</a>
                 <a href="">Fale Conosco</a>
             </div>
-            <a href="" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
+            <a href="login.html" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
         </nav>
         <!--<span class="material-symbols-outlined" id="X">cancel</span> -->
             
@@ -82,7 +80,7 @@
         <section>
             <h2>Contato</h2>
             <ul>
-                <li><span class="material-symbols-outlined" id = 'call'>call</span> +55 (31) 99354-826</li>
+                <li><span class="material-symbols-outlined" id = 'call'>call</span> +55 (31) 99354-8626</li>
                 <li><img src="images/mail.png" alt="">solmodasjuatuba@hotmail.com</li>
             </ul>
         </section>

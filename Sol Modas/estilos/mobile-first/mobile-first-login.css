@@ -1,0 +1,95 @@
+:root{
+    --font1: 'Titulo';
+    --font2: 'Corpo';
+    --font3: 'Padrão';
+    --cor1: #FFF4E5;
+    --cor2: #F5D6A1;
+    --cor3: #99794D;
+    --cor4: #66481F;
+    --cor5: #4A2E07;
+    --tr1: rgba(0, 0, 0, 0);
+    --tr2: #9b774394;
+}
+header{
+    height: 10vh;
+}
+header > div{
+    height: 100%;
+}
+main{
+    background-color: var(--cor4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+main > #container-login{
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--cor5);
+    width: 80%;
+    height: 80%;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.399);
+}
+#container-login h2{
+    margin: 30px;
+    font-size: 3vh;
+}
+#container-login input[type = email], #container-login input[type = password]{
+    margin-left: 5px;
+}
+#container-login input[type = submit]{
+    background-color: var(--cor4);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    width: 40%;
+}
+#login{
+    margin: auto;
+    text-align: center;
+    height: 50%;
+}
+#login p{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+#imagem-fundo{
+    background: var(--tr2) url(../../images/loja-interna-luzes.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+}
+.campo{
+    color: var(--cor1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: var(--cor4);
+    border-radius: 5px;
+}
+form{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (orientation: landscape) {
+    #container-login h2{
+        font-size: 3vw;
+    }
+}
