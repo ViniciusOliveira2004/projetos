@@ -172,6 +172,7 @@ header #produtos2{
     overflow-y: hidden;
     transition: all 0.5s;
     max-height: 0vh;
+    height: auto;
 }
 #produtos2 > a{
     display: flex;
@@ -182,7 +183,7 @@ header #produtos2{
     transition: all 0.5s;
     width: 70%;
     height: 5vh;
-    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
     text-indent: 0px;
     color: var(--cor5);
     border-radius: 10px;
@@ -195,7 +196,7 @@ header #produtos2{
     margin: 0px 5%;
     right: 0%;
     font-size: 2.5vh;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     transition: 0.2s;
     color: var(--cor4);
 }

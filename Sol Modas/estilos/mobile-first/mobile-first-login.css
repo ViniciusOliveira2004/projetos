@@ -74,6 +74,10 @@ label{
     border: none;
     padding: 10px;
     width: 40%;
+    transition: 0.3s;
+}
+#container-login input[type = submit]:hover{
+    background-color: var(--cor3);
 }
 #login-form{
     text-align: center;
