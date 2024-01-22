@@ -10,37 +10,61 @@
     --tr1: rgba(0, 0, 0, 0);
     --tr2: #9b774394;
 }
+body,html{
+    height: 100vh;
+}
 header{
-    height: 10vh;
+    height: 10%;
 }
 header > div{
     height: 100%;
 }
 main{
     background-color: var(--cor4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 90vh;
+    height: 90%;
+    width: 100vw;
+    position: fixed;
+    overflow-y:auto;
 }
 main > #container-login{
     background-color: var(--cor1);
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     color: var(--cor5);
     width: 80%;
-    height: 80%;
+    max-width: 350px;
+    height: 90%;
+    max-height: 600px;
+    min-height: 400px;
+    margin: 10px;
+    
     margin: 10px auto;
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.399);
 }
-#container-login h2{
-    margin: 30px;
-    font-size: 3vh;
+label{
+    width: 25%;
+    font-size: 0.8em;
+}
+.campo{
+    color: var(--cor1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--cor4);
+    border-radius: 5px;
 }
 #container-login input[type = email], #container-login input[type = password]{
+    font-size: 1em;
+    width: 75%;
     margin-left: 5px;
 }
 #container-login input[type = submit]{
@@ -51,36 +75,34 @@ main > #container-login{
     padding: 10px;
     width: 40%;
 }
-#login{
-    margin: auto;
+#login-form{
     text-align: center;
+    width: 80%;
     height: 50%;
+    min-height: 200px;
 }
-#login p{
-    width: 70%;
-    margin: auto;
+#login-form p{
+    width: 90%;
+    font-size: 2vh;
     text-align: center;
+    margin: 10px auto;
+}
+#login-form h2{
+    font-size: 3vh;
+    margin: 15px 0px;
 }
 #imagem-fundo{
-    background: var(--tr2) url(../../images/loja-interna-luzes.jpeg);
+    background: var(--tr3) url(../../images/loja-interna-luzes.jpeg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 50%;
+    min-height: 200px;
     width: 100%;
     border-radius: 0px 0px 20px 20px;
 }
-.campo{
-    color: var(--cor1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px;
-    background-color: var(--cor4);
-    border-radius: 5px;
-}
+
 form{
-    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,8 +110,37 @@ form{
 }
 
 
-@media screen and (orientation: landscape) {
+@media screen and ((orientation: landscape) or ((orientation: portrait ) and (min-height: 768px))){
+    header{
+        height: 15vw;
+    }
+    main{
+        height: calc(100vh - 15vw);
+    }
+    header h1, header #sol, header #menu, header #conta{
+        font-size: 7vw;
+    }
+    main > #container-login{
+        height: 600px;
+        width: 350px;
+        top: 5vh;
+        transform: translate(-50%,0%);
+        bottom: auto;
+    }
     #container-login h2{
         font-size: 3vw;
+    }
+    #login-form{
+        min-height: 300px;height: 300px;
+    }
+    #login-form p{
+        font-size: 1em;
+    }
+    #login-form h2{
+        font-size: 2em;
+    }
+    #imagem-fundo{
+        min-height: 300px;
+        height: 300px;
     }
 }

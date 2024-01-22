@@ -22,7 +22,8 @@
     --cor4: #66481F;
     --cor5: #4A2E07;
     --tr1: rgba(0, 0, 0, 0);
-    --tr2: #9a723b;
+    --tr2: rgba(0, 0, 0, 0.500);
+    --tr3: #99794d8d;
 }
 *{
     padding: 0px;
@@ -117,7 +118,7 @@ header #Nav{
     justify-content: space-between;
     flex-direction: column;
     overflow-x: hidden;
-    overflow-y:auto;
+    overflow-y: auto;
     padding-top: 20px;
     position: fixed;
     border-right: 2px solid var(--cor4);
@@ -145,7 +146,6 @@ header nav a:hover{
 header nav #login{
     border-radius: 0px;
     position: relative;
-    overflow-y: hidden;
     transition: all 0.3s;
     background-color: var(--cor4);
     display: flex;
@@ -158,8 +158,8 @@ header nav #login{
     border: none;
     margin: 5vh 0px 0px 0px;
     width: 100%;
-    bottom: 0%;
     left: 0%;
+    bottom: 0%;
 }
 header nav #login span{
     font-size: 4vh;
@@ -399,7 +399,7 @@ footer section{
     list-style-position: inside;
     margin: 2%;
     min-width: 250px;
-    width: 80%;
+    width: 85%;
 }
 @media screen and (orientation: landscape) {
     header h1, header #menu, header #conta, header #sol{
@@ -437,14 +437,14 @@ footer section{
     }
 
     #sec1{
-        height: 70vh;
+        height: 50vw;
         min-height: 200px;
     }
     #sec1 > div{
         width: 50%;
         height: 60%;
-        max-height: 250px;
-        min-height: 180px;
+        max-height: 350px;
+        min-height: 200px;
     }
     #sec1 div > p{
         font-size: 3.5vw;
@@ -480,10 +480,12 @@ footer section{
         font-size: 4vw;
     }
     footer li{
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
     footer img{
         width: 3vw;
     }
-    
+    footer section{
+        width: 50%;
+    }
 }
