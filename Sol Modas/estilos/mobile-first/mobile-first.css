@@ -200,12 +200,6 @@ header #produtos2{
     transition: 0.2s;
     color: var(--cor4);
 }
-#X{
-    position: relative;
-    display: inline-block;
-    font-size: 5vh;
-    cursor: pointer;
-}
 #fundo{
     background-color: rgba(0, 0, 0, 0);
     position: fixed;

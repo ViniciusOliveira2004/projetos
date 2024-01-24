@@ -33,25 +33,58 @@
         </nav>
     </header>
     <main>
-        <section >
-            <h2>Filtrar Produtos</h2>
-            <h3>Tipo</h3>
-            <input type="radio" name="type" id="m"><label for="m">Masculino</label>
-            <input type="radio" name="type" id="f"><label for="f">Feminino</label>
-            <input type="radio" name="type" id="i"><label for="i">Infantil</label>
+
+        <section id="section-filtro">
+            <h2 onclick="MostrarFiltros()">Filtrar Produtos <span class="material-symbols-outlined" id="seta-top">arrow_back_ios</span></h2>
             <div id="filtro">
+                <h3 onclick="MostrarGenero()" id="h3genero">Gênero <span class="material-symbols-outlined seta-filtros" id="sg">arrow_back_ios</span></h3>
+                <div id="genero">
+                    <input type="radio" name="type" id="m"><label for="m"> Masculino</label> <br>
+                    <input type="radio" name="type" id="f"><label for="f"> Feminino</label> <br>
+                    <input type="radio" name="type" id="i"><label for="i"> Infantil</label> <br>
+                </div>
+                <h3 id="h3tamanho" onclick="MostrarTamanho()">Tamanho <span class="material-symbols-outlined seta-filtros" id="sta">arrow_back_ios</span></h3>
                 <div id="tam">
-
+                    <input type="checkbox" name="tamanho" id="P"><label for="P"> P</label> <br>
+                    <input type="checkbox" name="tamanho" id="M"><label for="M"> M</label> <br>
+                    <input type="checkbox" name="tamanho" id="G"><label for="G"> G</label> <br>
+                    <input type="checkbox" name="tamanho" id="GG"><label for="GG"> GG</label> <br>
                 </div>
+                <h3 id="h3tipo" onclick="MostrarTipo()">Tipo <span class="material-symbols-outlined seta-filtros" id="sti">arrow_back_ios</span></h3>
                 <div id="tipo">
-
-                </div>
-                <div>
-
+                    <div id="masc" class="tipo-content">
+                        <input type="checkbox" name="M" id="Blusa-M"> <label for="Blusa-M">Blusa</label>
+                        <input type="checkbox" name="M" id="Camiseta-M"><label for="Camiseta-M">Camiseta</label>
+                        <input type="checkbox" name="M" id="Calça-M"> <label for="Calça-M">Calça</label>
+                        <input type="checkbox" name="M" id="Bermuda-M"> <label for="Bermuda-M">Bermuda</label>
+                        <input type="checkbox" name="M" id="Acessório-M"> <label for="Acessório-M">Acessório</label>
+                    </div>
+                    <div id="fem" class="tipo-content">
+                        <input type="checkbox" name="F" id="Acessório-F"> <label for="Acessório-F">Acessório</label> <br>
+                        <input type="checkbox" name="F" id="Blusa-F"> <label for="Blusa-F">Blusa</label> <br>
+                        <input type="checkbox" name="F" id="Calça-F"> <label for="Calça-F">Calça</label> <br>
+                        <input type="checkbox" name="F" id="Camiseta-F"> <label for="Camiseta-F">Camiseta</label> <br>
+                        <input type="checkbox" name="F" id="Cropped-F"> <label for="Cropped-F">Cropped</label> <br>
+                        <input type="checkbox" name="F" id="Short-F"> <label for="Short-F">Short</label> <br>
+                        <input type="checkbox" name="F" id="Top-F"> <label for="Top-F">Top</label> <br>
+                        <input type="checkbox" name="F" id="Vestido-F"> <label for="Vestido-F">Vestido</label> <br>
+                    </div>
+                    <div id="inf" class="tipo-content">
+                        <input type="checkbox" name="I" id="Acessório-I"> <label for="Acessório-I">Acessório</label> <br>
+                        <input type="checkbox" name="I" id="Blusa-I"> <label for="Blusa-I">Blusa</label> <br>
+                        <input type="checkbox" name="I" id="Calça-I"> <label for="Calça-I">Calça</label> <br>
+                        <input type="checkbox" name="I" id="Camiseta-I"> <label for="Camiseta-I">Camiseta</label> <br>
+                        <input type="checkbox" name="I" id="Vestido-I"> <label for="Vestido-I">Vestido</label> <br>
+                    </div>
                 </div>
             </div>
+            
+        </section>
+        <section id="conteudo">
+             
         </section>
     </main>
 </body>
+<script src="script-produtos.js"></script>
 <script src="script.js"></script>
 </html>
