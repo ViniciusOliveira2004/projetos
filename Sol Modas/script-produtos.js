@@ -1,11 +1,13 @@
 function MostrarFiltros(){
     const filtro = document.getElementById('filtro')
     const setatop = document.getElementById('seta-top')
-    if(filtro.style.maxHeight == '50vh'){
+    if(filtro.style.maxHeight == '100vh'){
         filtro.style.maxHeight = '0vh'
+        filtro.style.padding = '0px'
         setatop.style.transform = 'rotate(-90deg)'
     } else{
-        filtro.style.maxHeight = '50vh'
+        filtro.style.maxHeight = '100vh'
+        filtro.style.paddingBottom = '10px'
         setatop.style.transform = 'rotate(90deg)'
     }
 }
@@ -47,8 +49,8 @@ function MostrarTipo(){
     const setatipo = document.getElementById('sti')
     if(tipo.style.maxHeight == '50vh'){
         tipo.style.maxHeight = '0vh'
-        tipoh3.style.transition = 'border-radius 0.6s'
         tipoh3.style.borderRadius = '10px'
+        tipoh3.style.transition = 'border-radius 0.6s'
         setatipo.style.transform = 'rotate(-90deg)'
     } else{
         tipo.style.maxHeight = '50vh'

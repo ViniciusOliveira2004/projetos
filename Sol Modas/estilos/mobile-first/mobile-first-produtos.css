@@ -1,7 +1,7 @@
 #section-filtro{
-    background-color: var(--cor4);
-    padding: 1vh;
+    background-color: var(--cor3);
     height: auto;
+    padding: 1vh;
 }
 #filtro{
     display: flex;
@@ -12,6 +12,7 @@
     border-radius: 20px;
     transition: 0.3s;
     height: auto;
+    padding: 0px;
     max-height: 0vh;
 }
 
@@ -37,14 +38,15 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--cor4);
-    margin-top: 1vh;
+    color: var(--cor3);
+    margin-top:1vh;
     background-color: var(--cor2);
     border-radius: 10px;
     width: 70%;
-    height: 4vh;
+    height: 5vh;
     cursor: pointer;
     text-indent: 1vh;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
 }
 #seta-top{
     transform: rotate(-90deg);
@@ -65,8 +67,11 @@ span.seta-filtros{
     font-size: 2vh;
     margin-right: 1vw;
 }
-input[type = checkbox], input[type = radio], label{
+input[type = checkbox], input[type = radio]{
     white-space:nowrap;
-    margin-top: 1vh;
-    margin-left: 1vh;
+    margin: 1vh 0.5vh 1vh 1vh;
+    cursor: pointer;
+}
+label{
+    cursor: pointer;
 }

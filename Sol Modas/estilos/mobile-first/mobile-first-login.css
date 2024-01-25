@@ -12,9 +12,10 @@
 }
 body,html{
     height: 100vh;
+    overflow-y: hidden
 }
 header{
-    height: 10%;
+    height: 10vh;
 }
 header > div{
     height: 100%;
@@ -22,9 +23,8 @@ header > div{
 main{
     background-color: var(--cor4);
     height: 90%;
-    width: 100vw;
-    position: fixed;
-    overflow-y:auto;
+    width: 100%;
+    position: relative;
 }
 main > #container-login{
     background-color: var(--cor1);
@@ -118,11 +118,16 @@ form{
     header{
         height: 15vw;
     }
-    main{
-        height: calc(100vh - 15vw);
-    }
     header h1, header #sol, header #menu, header #conta{
         font-size: 7vw;
+    }
+    main{
+        min-height: 640px;
+        height: calc(100vh - 15vw);
+    }
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     main > #container-login{
         height: 600px;
