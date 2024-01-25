@@ -1,3 +1,25 @@
+let genero = document.getElementsByName('gen')
+genero[0].addEventListener('click', fede())
+function fede(){
+    for(let generoatual of genero){
+        if(generoatual.checked){
+            let idgen = generoatual.id
+            console.log(idgen)
+            if(idgen == 'm'){
+                const masc = document.getElementById('masc')
+                masc.style.display = 'block'
+            } else if(idgen == 'f'){
+                const fem = document.getElementById('fem')
+                fem.style.display = 'block'
+            } else if(idgen == 'i'){
+                const inf = document.getElementById('inf')
+                inf.style.display = 'block'
+            }
+        }
+    }
+}
+
+
 function MostrarFiltros(){
     const filtro = document.getElementById('filtro')
     const setatop = document.getElementById('seta-top')
@@ -17,7 +39,7 @@ function MostrarGenero(){
     const setagenero = document.getElementById('sg')
     if(genero.style.maxHeight == '50vh'){
         genero.style.maxHeight = '0vh'
-        generoh3.style.transition = 'border-radius 0.6s'
+        generoh3.style.transition = 'border-radius 1.2s'
         generoh3.style.borderRadius = '10px'
         setagenero.style.transform = 'rotate(-90deg)'
     } else{
@@ -33,7 +55,7 @@ function MostrarTamanho(){
     const setatamanho = document.getElementById('sta')
     if(tamanho.style.maxHeight == '50vh'){
         tamanho.style.maxHeight = '0vh'
-        tamanhoh3.style.transition = 'border-radius 0.6s'
+        tamanhoh3.style.transition = 'border-radius 1.2s'
         tamanhoh3.style.borderRadius = '10px'
         setatamanho.style.transform = 'rotate(-90deg)'
     } else{
@@ -50,7 +72,7 @@ function MostrarTipo(){
     if(tipo.style.maxHeight == '50vh'){
         tipo.style.maxHeight = '0vh'
         tipoh3.style.borderRadius = '10px'
-        tipoh3.style.transition = 'border-radius 0.6s'
+        tipoh3.style.transition = 'border-radius 1.2s'
         setatipo.style.transform = 'rotate(-90deg)'
     } else{
         tipo.style.maxHeight = '50vh'
@@ -58,4 +80,28 @@ function MostrarTipo(){
         tipoh3.style.borderRadius = '10px 10px 0px 0px'
         setatipo.style.transform = 'rotate(90deg)'
     }
+}
+
+function FiltrarTexto(){
+    const produto = document.querySelectorAll('#conteudo li')
+    const texto = document.getElementById('barra')
+    if(texto.value != ''){
+        let textofiltrado = texto.value.toLowerCase()
+        for(var i = 0; i < produto.length; i++){
+            let produtofiltrado = produto[i].querySelector('p')
+            produtofiltrado = produtofiltrado.textContent.toLowerCase()
+            if(produtofiltrado.includes(textofiltrado)){
+                produto[i].style.display = 'block'
+            }else{
+                produto[i].style.display = 'none'
+            }
+        }
+    } else{
+        for(var i = 0; i < produto.length; i++){
+            produto[i].style.display = 'block'
+        }
+    }
+}
+function FiltrarPor(){
+
 }

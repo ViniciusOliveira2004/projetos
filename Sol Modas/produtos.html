@@ -39,49 +39,112 @@
             <div id="filtro">
                 <h3 onclick="MostrarGenero()" id="h3genero">Gênero <span class="material-symbols-outlined seta-filtros" id="sg">arrow_back_ios</span></h3>
                 <div id="genero">
-                    <input type="radio" name="type" id="m"><label for="m"> Masculino</label> <br>
-                    <input type="radio" name="type" id="f"><label for="f"> Feminino</label> <br>
-                    <input type="radio" name="type" id="i"><label for="i"> Infantil</label> <br>
+                    <ul>
+                        <li><input type="radio" name="gen" id="m"><label for="m"> Masculino</label></li>
+                        <li><input type="radio" name="gen" id="f"><label for="f"> Feminino</label> </li>
+                        <li><input type="radio" name="gen" id="i"><label for="i"> Infantil</label> </li>
+                    </ul>
                 </div>
                 <h3 id="h3tamanho" onclick="MostrarTamanho()">Tamanho <span class="material-symbols-outlined seta-filtros" id="sta">arrow_back_ios</span></h3>
                 <div id="tam">
-                    <input type="checkbox" name="tamanho" id="P"><label for="P"> P</label> <br>
-                    <input type="checkbox" name="tamanho" id="M"><label for="M"> M</label> <br>
-                    <input type="checkbox" name="tamanho" id="G"><label for="G"> G</label> <br>
-                    <input type="checkbox" name="tamanho" id="GG"><label for="GG"> GG</label> <br>
+                    <ul>
+                        <li><input type="checkbox" name="tamanho" id="P"><label for="P"> P</label> </li>
+                        <li><input type="checkbox" name="tamanho" id="M"><label for="M"> M</label> </li>
+                        <li><input type="checkbox" name="tamanho" id="G"><label for="G"> G</label> </li>
+                        <li><input type="checkbox" name="tamanho" id="GG"><label for="GG"> GG</label> </li>
+                    </ul>
                 </div>
                 <h3 id="h3tipo" onclick="MostrarTipo()">Tipo <span class="material-symbols-outlined seta-filtros" id="sti">arrow_back_ios</span></h3>
                 <div id="tipo">
                     <div id="masc" class="tipo-content">
-                        <input type="checkbox" name="M" id="Blusa-M"> <label for="Blusa-M">Blusa</label>
-                        <input type="checkbox" name="M" id="Camiseta-M"><label for="Camiseta-M">Camiseta</label>
-                        <input type="checkbox" name="M" id="Calça-M"> <label for="Calça-M">Calça</label>
-                        <input type="checkbox" name="M" id="Bermuda-M"> <label for="Bermuda-M">Bermuda</label>
-                        <input type="checkbox" name="M" id="Acessório-M"> <label for="Acessório-M">Acessório</label>
+                        <ul>
+                            <li><input type="checkbox" name="M" id="Blusa-M"> <label for="Blusa-M">Blusa</label></li>
+                            <li><input type="checkbox" name="M" id="Camiseta-M"><label for="Camiseta-M">Camiseta</label></li>
+                            <li><input type="checkbox" name="M" id="Calça-M"> <label for="Calça-M">Calça</label></li>
+                            <li><input type="checkbox" name="M" id="Bermuda-M"> <label for="Bermuda-M">Bermuda</label></li>
+                            <li><input type="checkbox" name="M" id="Acessório-M"> <label for="Acessório-M">Acessório</label></li>
+                        </ul>
                     </div>
                     <div id="fem" class="tipo-content">
-                        <input type="checkbox" name="F" id="Acessório-F"> <label for="Acessório-F">Acessório</label> <br>
-                        <input type="checkbox" name="F" id="Blusa-F"> <label for="Blusa-F">Blusa</label> <br>
-                        <input type="checkbox" name="F" id="Calça-F"> <label for="Calça-F">Calça</label> <br>
-                        <input type="checkbox" name="F" id="Camiseta-F"> <label for="Camiseta-F">Camiseta</label> <br>
-                        <input type="checkbox" name="F" id="Cropped-F"> <label for="Cropped-F">Cropped</label> <br>
-                        <input type="checkbox" name="F" id="Short-F"> <label for="Short-F">Short</label> <br>
-                        <input type="checkbox" name="F" id="Top-F"> <label for="Top-F">Top</label> <br>
-                        <input type="checkbox" name="F" id="Vestido-F"> <label for="Vestido-F">Vestido</label> <br>
+                        <ul>
+                            <li><input type="checkbox" name="F" id="Acessório-F"> <label for="Acessório-F">Acessório</label> </li>
+                            <li><input type="checkbox" name="F" id="Blusa-F"> <label for="Blusa-F">Blusa</label> </li>
+                            <li><input type="checkbox" name="F" id="Calça-F"> <label for="Calça-F">Calça</label> </li>
+                            <li><input type="checkbox" name="F" id="Camiseta-F"> <label for="Camiseta-F">Camiseta</label> </li>
+                            <li><input type="checkbox" name="F" id="Cropped-F"> <label for="Cropped-F">Cropped</label> </li>
+                            <li><input type="checkbox" name="F" id="Short-F"> <label for="Short-F">Short</label></li>
+                            <li><input type="checkbox" name="F" id="Top-F"> <label for="Top-F">Top</label> </li>
+                            <li><input type="checkbox" name="F" id="Vestido-F"> <label for="Vestido-F">Vestido</label> </li>
+                        </ul>
                     </div>
                     <div id="inf" class="tipo-content">
-                        <input type="checkbox" name="I" id="Acessório-I"> <label for="Acessório-I">Acessório</label> <br>
-                        <input type="checkbox" name="I" id="Blusa-I"> <label for="Blusa-I">Blusa</label> <br>
-                        <input type="checkbox" name="I" id="Calça-I"> <label for="Calça-I">Calça</label> <br>
-                        <input type="checkbox" name="I" id="Camiseta-I"> <label for="Camiseta-I">Camiseta</label> <br>
-                        <input type="checkbox" name="I" id="Vestido-I"> <label for="Vestido-I">Vestido</label> <br>
+                        <ul>
+                            <li><input type="checkbox" name="I" id="Acessório-I"> <label for="Acessório-I">Acessório</label></li>
+                            <li><input type="checkbox" name="I" id="Blusa-I"> <label for="Blusa-I">Blusa</label></li>
+                            <li><input type="checkbox" name="I" id="Calça-I"> <label for="Calça-I">Calça</label></li>
+                            <li><input type="checkbox" name="I" id="Camiseta-I"> <label for="Camiseta-I">Camiseta</label></li>
+                            <li><input type="checkbox" name="I" id="Vestido-I"> <label for="Vestido-I">Vestido</label> </li>
+                        </ul>
                     </div>
                 </div>
+                <div id="buttons">
+                    <input type="button" value="Filtrar" class="botao-filtro" onclick="FiltrarPor()">
+                    <input type="button" value="Limpar Filtros" class="botao-filtro">
+                </div>
             </div>
-            
+            <input type="text" name="input" id="barra" onkeyup="FiltrarTexto()" style="display: none;">
         </section>
         <section id="conteudo">
-             
+             <ul>
+                <li>
+                    <img src="products/Blusatricot1.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Blusa Lesse | Rosa</p>
+                        <p>Tamanho: P M G</p>
+                        <p class="preco">R$69,90</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="products/Calcamasc.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Calça Jeans Maculina</p>
+                        <p>Tamanho: 36 à 44</p>
+                        <p class="preco">R$49,90</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="products/Blusa1.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Blusa Top | Cinza</p>
+                        <p>Tamanho: P M G</p>
+                        <p class="preco">R$199,90</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="products/Camisetaazul1.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Camiseta regata | Azul Claro</p>
+                        <p>Tamanho: P M</p>
+                        <p class="preco">R$79,99</p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="products/arquinho.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Conjunto Arquinho + Brinco Infantil</p>
+                        <p class="preco">R$39,90</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="products/vestido.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Vestido Longo Detalhado</p>
+                        <p>Tamanho: </p>
+                        <p class="preco">R$209,99</p>
+                    </div>
+                </li>
+             </ul>
         </section>
     </main>
 </body>
