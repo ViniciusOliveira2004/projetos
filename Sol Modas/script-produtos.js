@@ -1,25 +1,46 @@
-let genero = document.getElementsByName('gen')
-genero[0].addEventListener('click', fede())
-function fede(){
-    for(let generoatual of genero){
-        if(generoatual.checked){
-            let idgen = generoatual.id
-            console.log(idgen)
-            if(idgen == 'm'){
-                const masc = document.getElementById('masc')
+const listagenero = document.querySelectorAll('#genero > ul > li > label > input')
+const listatamanho = document.querySelectorAll('#tam > ul > li > input')
+const conteudo = document.querySelectorAll('#conteudo > ul > li')
+
+let masc  = document.getElementById('masc')
+let fem  = document.getElementById('fem')
+let inf  = document.getElementById('inf')
+let select
+function SelecionaTipo(){
+    for(let type of listagenero){
+        if(type.checked){
+            if(type.id == 'Masculino'){
                 masc.style.display = 'block'
-            } else if(idgen == 'f'){
-                const fem = document.getElementById('fem')
+                fem.style.display = 'none'
+                Desmarca(document.querySelectorAll('#fem li > input'))
+                inf.style.display = 'none'
+                Desmarca(document.querySelectorAll('#inf li > input'))
+                select = masc.id
+            }else if(type.id == 'Feminino'){
+                masc.style.display = 'none'
+                Desmarca(document.querySelectorAll('#masc li > input'))
                 fem.style.display = 'block'
-            } else if(idgen == 'i'){
-                const inf = document.getElementById('inf')
+                inf.style.display = 'none'
+                Desmarca(document.querySelectorAll('#inf li > input'))
+                select = fem.id
+            }else if(type.id == 'Infantil'){
+                masc.style.display = 'none'
+                Desmarca(document.querySelectorAll('#masc li > input'))
+                fem.style.display = 'none'
+                Desmarca(document.querySelectorAll('#fem li > input'))
                 inf.style.display = 'block'
+                select = inf.id
             }
+            break
         }
     }
 }
+function Desmarca(lista){
+    for(let element of lista){
+        element.checked = 0
+    }
 
-
+}
 function MostrarFiltros(){
     const filtro = document.getElementById('filtro')
     const setatop = document.getElementById('seta-top')
@@ -50,6 +71,7 @@ function MostrarGenero(){
     }
 }
 function MostrarTamanho(){
+
     const tamanho = document.getElementById('tam')
     const tamanhoh3 = document.getElementById('h3tamanho')
     const setatamanho = document.getElementById('sta')
@@ -103,5 +125,64 @@ function FiltrarTexto(){
     }
 }
 function FiltrarPor(){
+    for(let i of conteudo){
+        i.style.display = 'none'
+    }
+    let elemento = ''
+    //Filtrando Genero
+    for(elemento of listagenero){
+        if(elemento.checked){
+            FiltrarGenero(elemento.id)
+            break
+        }
+    }
+    let listatipo = document.querySelectorAll(`#${select} > ul > li > input`)
+    console.log(listatipo)
+    //Filtrando Tamanho
+    let marcado = []
+    for(elemento of listatamanho){
+        if(elemento.checked){
+           marcado.push(elemento.id)
+        }
+    }
+    if(marcado.length != 0){
+        FiltrarClasse(marcado)
+    }
 
+    //Filtrar Tipo de Roupa
+    marcado = []
+    for(elemento of listatipo){
+        if(elemento.checked){
+            console.log(elemento.className)
+            marcado.push(elemento.className)
+        }
+    }
+    if(marcado.length != 0){
+        FiltrarClasse(marcado)
+    }
+}
+
+function FiltrarGenero(classe){
+    for(let product of conteudo){
+        if(product.className.includes(classe)){
+            product.style.display = 'block'
+        } else{
+            product.style.display = 'none'
+        }
+    }
+}
+function FiltrarClasse(classesmarcadas){
+    for(let product of conteudo){
+        let possui = 0
+        if(product.style.display == 'block'){
+            for(let classei of classesmarcadas){
+                if(product.className.includes(classei)){
+                    possui++
+                }
+            }
+            if(possui == 0){
+                product.style.display = 'none'
+            }
+        } 
+    }
 }

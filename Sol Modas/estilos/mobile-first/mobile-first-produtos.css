@@ -61,8 +61,13 @@ h3{
     font-size: 3vh;
     color: var(--cor1);
 }
-#masc, #fem, #inf{
+#masc, #inf{
     display: none;
+    height: auto;
+}
+#fem{
+    display: block;
+    height: auto;
 }
 span.seta-filtros{
     transform: rotate(-90deg);
@@ -83,6 +88,7 @@ span.seta-filtros{
     background-color: var(--cor1);
     border: none;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.300);
     margin: 2vh 1vh 0vh 1vh;
     transition: 0.3s;
 }
@@ -111,8 +117,10 @@ label{
     border-radius: 10px;
     background-color: var(--cor1);
     flex: 1 1 40%;
+    max-width: 40%;
     text-align: center;
     margin: 10px;
+    display: none;
 }
 #conteudo li p{
     margin: 0.5vh 0px;
