@@ -20,10 +20,10 @@ function ClicouProdutos(){
     let p = document.getElementById('produtos2')
     let simbolo = document.getElementById('left')
     if(p.style.maxHeight == '100vh'){
-        simbolo.style.transform = 'rotate(90deg)'
+        simbolo.style.transform = 'rotate(-90deg)'
         p.style.maxHeight = '0vh'
     } else{
-        simbolo.style.transform = 'rotate(-90deg)'
+        simbolo.style.transform = 'rotate(90deg)'
         p.style.maxHeight = '100vh';
     }
 }

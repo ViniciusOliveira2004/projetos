@@ -2,9 +2,29 @@
     list-style-type: none;
 }
 #section-filtro{
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     height: auto;
-    padding: 1vh;
+}
+#section-filtro > #menus{
+    background-color: var(--cor3);
+    display: flex;
+    align-items: center;
+    box-shadow:0px 2px 5px rgba(0, 0, 0, 0.500);
+    justify-content: center;
+}
+#section-filtro a{
+    font-size: 1.5em;
+    color: var(--cor4);
+    background-color: var(--cor2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.300);
+    margin: 10px;
+}
+#section-filtro a:hover{
+    background-color: var(--cor4);
+    color: var(--cor2);
+}
+#section-filtro a:active{
+    background-color: var(--cor4);
 }
 #filtro{
     display: flex;
@@ -16,7 +36,7 @@
     transition: 0.3s;
     height: auto;
     padding: 0px;
-    max-height: 0vh;
+    max-height: 100vh;
 }
 
 #genero, #tam, #tipo{
@@ -25,17 +45,17 @@
     overflow-y: hidden;
     transition: 0.3s;
     background-color: var(--cor1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
     border-radius: 0px 0px 10px 10px;
     width: 70%;
 }
 
 h2{
     text-align: center;
-    color: var(--cor1);
-    width: auto;
-    margin: auto;
+    color: var(--cor4);
+    width: 100%;
+    margin: 1vh auto;
     cursor: pointer;
-    transition: 0.3s;
 }
 h3{
     display: flex;
@@ -43,7 +63,7 @@ h3{
     justify-content: space-between;
     color: var(--cor3);
     margin-top:1vh;
-    background-color: var(--cor2);
+    background-color: var(--cor1);
     border-radius: 10px;
     width: 70%;
     height: 5vh;
@@ -52,23 +72,18 @@ h3{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
 }
 #seta-top{
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
+    transform-origin:center center;
     transition: 0.2s;
     border-radius: 50%;
-    margin-left: 2%;
-    width: 3vh;
-    height: 4vh;
-    font-size: 3vh;
-    color: var(--cor1);
+    font-size: 2.5vh;
+    color: var(--cor4);
 }
-#masc, #inf{
+#masc, #inf, #fem{
     display: none;
     height: auto;
 }
-#fem{
-    display: block;
-    height: auto;
-}
+
 span.seta-filtros{
     transform: rotate(-90deg);
     transition: 0.2s;
@@ -79,6 +94,7 @@ span.seta-filtros{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
     width: 70%;
 }
 .botao-filtro{
@@ -120,7 +136,7 @@ label{
     max-width: 40%;
     text-align: center;
     margin: 10px;
-    display: none;
+    display: block;
 }
 #conteudo li p{
     margin: 0.5vh 0px;

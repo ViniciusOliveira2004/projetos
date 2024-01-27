@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/mobile-first/mobile-first.css" media="screen">
+    <link rel="stylesheet" href="estilos/mobile-first/mobile-first-produtos.css" media="screen">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Sol Modas-Login</title>
+</head>
+<body>
+    <div id = "fundo" onclick="ClicouMenu()"></div>
+    <header>
+        <div>
+            <span class="material-symbols-outlined" id="menu" onclick="ClicouMenu()">menu</span>
+            <a href="index.html"><h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1></a>
+            <a href="login.html"><span class="material-symbols-outlined" id="conta">account_circle</span></a>
+        </div>
+        <nav id="Nav">
+            <div>
+                <a href="#" onclick="ClicouProdutos()" >Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
+                <nav id="produtos2" >
+                    <a href="roupas.html">Roupas</a>
+                    <a href="acessorios.html" >Acessórios</a>
+                </nav>
+                <a href="">Sobre nós</a>
+                <a href="">Fale Conosco</a>
+            </div>
+            <a href="" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
+        </nav>
+    </header>
+    <main>
+
+        <section id="section-filtro">
+            <nav id = "menus">
+                <a href="roupas.html">Roupas</a>
+                <a href="acessorios.html" style="background-color: var(--cor4); color: var(--cor2);">Acessórios</a>
+            </nav>
+            <h2 onclick="MostrarFiltros()">Filtrar Produtos <span class="material-symbols-outlined" id="seta-top">arrow_back_ios</span></h2>
+            <div id="filtro">
+                <h3 onclick="MostrarGenero()" id="h3genero">Gênero <span class="material-symbols-outlined seta-filtros" id="sg">arrow_back_ios</span></h3>
+                <div id="genero">
+                    <ul>
+                        <li><label for="Masculino" onclick="SelecionaTipo()"><input type="radio" name="gen" id="Masculino"> Masculino</label></li>
+                        <li><label for="Feminino" onclick="SelecionaTipo()"><input type="radio" name="gen" id="Feminino" checked> Feminino</label> </li>
+                        <li><label for="Infantil" onclick="SelecionaTipo()"><input type="radio" name="gen" id="Infantil"> Infantil</label> </li>
+                        <li><label for="Todos" onclick="SelecionaTipo()"><input type="radio" name="gen" id="Todos" checked> Todos</label> </li>
+                    </ul>
+                </div>
+                <h3 id="h3tipo" onclick="MostrarTipo()">Tipo <span class="material-symbols-outlined seta-filtros" id="sti">arrow_back_ios</span></h3>
+                <div id="tipo">
+                    <div id="masc" class="tipo-content">
+                        <ul>
+                            <li><input type="checkbox" name="Ma" id="Bone-M" class="Bone"> <label for="Bone-M">Boné</label></li>
+                            <li><input type="checkbox" name="Ma" id="Cinto-M" class="Cinto"> <label for="Bone-M">Cinto</label></li>
+                            
+                        </ul>
+                    </div>
+                    <div id="fem" class="tipo-content">
+                        <ul> 
+                            <li><input type="checkbox" name="F" id="Arquinho-F" class="Arquinho"> <label for="Arquinho-F">Arquinho</label> </li>
+                            <li><input type="checkbox" name="F" id="Bolsa-F" class="Bolsa"> <label for="Bolsa-F">Bolsa</label> </li>
+                            <li><input type="checkbox" name="F" id="Brinco-F" class="Brinco"> <label for="Brinco-F">Brinco</label> </li>
+                            <li><input type="checkbox" name="F" id="Cinto-F" class="Cinto"> <label for="Cinto-F">Cinto</label> </li>
+                            <li><input type="checkbox" name="F" id="Colar-F" class="Colar"> <label for="Colar-F">Colar</label> </li>
+                            <li><input type="checkbox" name="F" id="Pulseira-F" class="Pulseira"> <label for="Pulseira-F">Pulseira</label> </li>
+                        </ul>
+                    </div>
+                    <div id="inf" class="tipo-content">
+                        <ul>  
+                            <li><input type="checkbox" name="I" id="Arquinho-I" class="Arquinho"> <label for="Arquinho-I">Arquinho</label> </li>
+                            <li><input type="checkbox" name="I" id="Bolsa-I" class="Bolsa"> <label for="Bolsa-I">Bolsinha</label> </li>
+                            <li><input type="checkbox" name="I" id="Brinco-I" class="Brinco"> <label for="Brinco-I">Brinco</label> </li>
+                            <li><input type="checkbox" name="I" id="Cinto-I" class="Cinto"> <label for="Cinto-I">Cinto</label> </li>
+                            <li><input type="checkbox" name="I" id="Colar-I" class="Colar"> <label for="Colar-I">Colar</label> </li>
+                            <li><input type="checkbox" name="I" id="Pulseira-I" class="Pulseira"> <label for="Pulseira-I">Pulseira</label> </li>
+                        </ul>
+                    </div>
+                    <div id="todos" class="tipo-content">
+                        <ul>
+                            <li><input type="checkbox" name="T" id="Arquinho-T" class="Arquinho"> <label for="Arquinho-T">Arquinho</label> </li>
+                            <li><input type="checkbox" name="T" id="Bone-T" class="Bone"> <label for="Bone-T">Boné</label></li>
+                            <li><input type="checkbox" name="T" id="Bolsa-T" class="Bolsa"> <label for="Bolsa-T">Bolsa</label> </li>
+                            <li><input type="checkbox" name="T" id="Brinco-T" class="Brinco"> <label for="Brinco-T">Brinco</label> </li>
+                            <li><input type="checkbox" name="T" id="Cinto-T" class="Cinto"> <label for="Cinto-T">Cinto</label> </li>
+                            <li><input type="checkbox" name="T" id="Colar-T" class="Colar"> <label for="Colar-T">Colar</label> </li>
+                            <li><input type="checkbox" name="T" id="Pulseira-T" class="Pulseira"> <label for="Pulseira-T">Pulseira</label> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <input type="button" value="Filtrar" class="botao-filtro" onclick="FiltrarPor()">
+                    <input type="button" value="Limpar Filtros" class="botao-filtro" onclick="LimpaFiltros()">
+                </div>
+            </div>
+            <input type="text" name="input" id="barra" onkeyup="FiltrarTexto()" style="display: none;">
+        </section>
+        <section id="conteudo">
+             <ul>
+                <li class="Infantil Acessorio">
+                    <img src="products/arquinho.jpeg" alt="p1">
+                    <div class="info">
+                        <p>Conjunto Arquinho + Brinco Infantil</p>
+                        <p class="preco">R$39,90</p>
+                    </div>
+                </li>
+             </ul>
+        </section>
+    </main>
+</body>
+<script src="script-produtos.js"></script>
+<script src="script.js"></script>
+</html>
