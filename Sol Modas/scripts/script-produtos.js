@@ -63,11 +63,11 @@ function MostrarFiltros(){
     if(filtro.style.maxHeight == '0vh'){
         filtro.style.maxHeight = '100vh'
         filtro.style.paddingBottom = '10px'
-        setatop.style.transform = 'rotate(90deg)'
+        setatop.style.transform = 'rotate(-90deg)'
     } else{
         filtro.style.maxHeight = '0vh'
         filtro.style.padding = '0px'
-        setatop.style.transform = 'rotate(-90deg)' 
+        setatop.style.transform = 'rotate(90deg)' 
     }
 }
 function MostrarGenero(){

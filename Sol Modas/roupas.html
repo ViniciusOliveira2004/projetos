@@ -26,7 +26,7 @@
                     <a href="acessorios.html">Acessórios</a>
                 </nav>
                 <a href="">Sobre nós</a>
-                <a href="">Fale Conosco</a>
+                <a href="index.html" onclick="MoverPage()">Fale Conosco</a>
             </div>
             <a href="" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
         </nav>
@@ -38,7 +38,7 @@
                 <a href="roupas.html" style="background-color: var(--cor4); color: var(--cor2);">Roupas</a>
                 <a href="acessorios.html">Acessórios</a>
             </nav>
-            <h2 onclick="MostrarFiltros()">Filtrar Produtos <span class="material-symbols-outlined" id="seta-top">arrow_back_ios</span></h2>
+            <h2 onclick="MostrarFiltros()">Filtrar produtos por<span class="material-symbols-outlined" id="seta-top">arrow_back_ios</span></h2>
             <div id="filtro">
                 <h3 onclick="MostrarGenero()" id="h3genero">Gênero <span class="material-symbols-outlined seta-filtros" id="sg">arrow_back_ios</span></h3>
                 <div id="genero">
@@ -106,7 +106,9 @@
                     <input type="button" value="Limpar Filtros" class="botao-filtro" onclick="LimpaFiltros()">
                 </div>
             </div>
-            <input type="text" name="input" id="barra" onkeyup="FiltrarTexto()" style="display: none;">
+            <div id="filtro-text">
+                <input type="text" name="input" id="barra" onkeyup="FiltrarTexto()" placeholder=" Digite o nome do produto"> <span class="material-symbols-outlined">search</span>
+            </div>
         </section>
         <section id="conteudo">
              <ul>
@@ -162,6 +164,6 @@
         </section>
     </main>
 </body>
-<script src="script-produtos.js"></script>
-<script src="script.js"></script>
+<script src="scripts/script-produtos.js"></script>
+<script src="scripts/script.js"></script>
 </html>
