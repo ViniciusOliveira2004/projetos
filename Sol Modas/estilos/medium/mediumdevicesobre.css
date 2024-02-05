@@ -1,0 +1,16 @@
+header h1, header #conta{
+    font-size:4em;
+}
+header #sol{
+    font-size: 1em;
+}
+header #menu{
+    display: block;
+    visibility: collapse;
+}
+#seta-top{
+    font-size: 1em;
+}
+main section{
+    max-width: 600px;
+}

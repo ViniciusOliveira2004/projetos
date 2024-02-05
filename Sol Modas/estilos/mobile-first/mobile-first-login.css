@@ -15,7 +15,10 @@ body,html{
     overflow-y: hidden
 }
 header{
-    height: 10vh;
+    height: 10%;
+}
+#conta{
+    visibility: collapse;
 }
 header > div{
     height: 100%;
@@ -24,28 +27,25 @@ main{
     background-color: var(--cor4);
     height: 90%;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 main > #container-login{
     background-color: var(--cor1);
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%,50%);
+    flex: 1 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     color: var(--cor5);
-    width: 80%;
+    width: 95%;
     max-width: 350px;
-    height: 90%;
+    height: 95%;
     max-height: 600px;
     min-height: 400px;
-    margin: 10px;
-    
-    margin: 10px auto;
     border-radius: 20px;
+    margin: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.399);
 }
 label{
@@ -87,12 +87,16 @@ label{
 }
 #login-form p{
     width: 90%;
-    font-size: 2vh;
+    font-size: 0.8em;
     text-align: center;
     margin: 10px auto;
 }
+#login-form p > span{
+    display: block;
+    text-align: center;
+}
 #login-form h2{
-    font-size: 3vh;
+    font-size: 3.5vh;
     margin: 15px 0px;
 }
 #imagem-fundo{
@@ -112,44 +116,24 @@ form{
     align-items: center;
     justify-content: center;
 }
-
-
-@media screen and ((orientation: landscape) or ((orientation: portrait ) and (min-height: 768px))){
+@media screen and (orientation: landscape) {
     header{
-        height: 15vw;
-    }
-    header h1, header #sol, header #menu, header #conta{
-        font-size: 7vw;
+        height: 10vw;
     }
     main{
-        min-height: 640px;
-        height: calc(100vh - 15vw);
+        height: auto;
     }
     body{
         overflow-y: auto;
-        overflow-x: hidden;
     }
     main > #container-login{
         height: 600px;
-        width: 350px;
-        top: 5vh;
-        transform: translate(-50%,0%);
-        bottom: auto;
-    }
-    #container-login h2{
-        font-size: 3vw;
-    }
-    #login-form{
-        min-height: 300px;height: 300px;
+        width: 300px;
     }
     #login-form p{
         font-size: 1em;
     }
     #login-form h2{
-        font-size: 2em;
-    }
-    #imagem-fundo{
-        min-height: 300px;
-        height: 300px;
+        font-size: 1.5em;
     }
 }

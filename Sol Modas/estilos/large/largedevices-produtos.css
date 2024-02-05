@@ -1,0 +1,224 @@
+header{
+    position: relative;
+    height: 15vh;
+    min-height: 100px;
+}
+header #conta{
+    font-size:3vw;
+}
+header #sol{
+    font-size: 1em;
+}
+header h1{
+    font-size: 3.5vw;
+    margin-left: 10px;
+}
+header > div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #menu{
+    display: none;
+}
+header #Nav{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    height: auto;
+    width: auto;
+    min-width: auto;
+    max-width: 100vw;
+    transition: all 0s;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px;
+    position: absolute;
+    border-right: none;
+    background-color: var(--tr1);
+}
+
+header #Nav > div{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+#buttomProdutos{
+    background-color: var(--cor1);
+    color: var(--cor5);
+}
+#buttomProdutos:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+#left{
+    color: var(--cor5);
+}
+#produtos2{
+    display: none;
+}
+header #produtos2-absolute{
+    display: block;
+    background-color: var(--cor3);
+    border-radius: 0px 0px 10px 10px;
+    box-sizing: border-box;
+    z-index: 20;
+    margin: auto;
+    padding: 0px;
+    position: absolute;
+    white-space: wrap;
+    overflow-y: hidden;
+    transition: max-height 0.5s;
+    max-height: 0px;
+    height: auto;
+    width: 160px;
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+#produtos2-absolute > a{
+    display: flex;
+    align-items: center;
+    background-color: var(--cor1);
+    position:relative;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: all 0.5s;
+    height: 5vh;
+    width: 90%;
+    margin: 10px auto;
+    text-indent: 0px;
+    color: var(--cor5);
+    border-radius: 10px;
+    border: none;
+}
+#produtos2-absolute > a:hover{
+    color: var(--cor1);
+    background-color: var(--cor4);
+    
+}
+header nav a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-size: 1.5em;
+    height: 50px;
+    width: 160px;
+    white-space:nowrap;
+    margin: 5px 10px;
+    color: var(--cor5);
+    border-radius: 10px;
+    background-color: var(--cor1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+#Nav #left{
+    font-size: 0.8em;
+    transform: rotate(-90deg);
+    color: var(--cor5);
+    transition: 0.3s;
+}
+header nav a:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+header nav #login{
+    position: absolute;
+    display: none;
+}
+/*MAIN ==============================================*/
+main{
+    border-radius: 20px;
+    border: 2px solid var(--cor5);
+    display: flex;
+    max-width: 1500px;
+}
+/* Filtro ============================================*/
+#filtro{
+    max-height: none;
+    position: relative;
+    height: auto;
+}
+#section-filtro{
+    position: relative;
+    width: 30%;
+    min-width: 380px;
+    border-radius: 16px 0px 0px 16px;
+    height: auto;
+    border-right: 2px solid var(--cor3);
+}
+#section-filtro > #menus{
+    border-radius: 16px 0px 0px 0px;
+}
+#section-filtro > #menus > a{
+    padding: 25px;
+}
+#genero, #tam, #tipo{
+    max-height: 50vh;
+    height: auto;
+    width: 70%;
+}
+h3{
+    background-color: var(--cor4);
+    color: var(--cor2);
+    text-indent: 0px;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+    width: 70%;
+    text-indent: 20px;
+    margin: auto;
+    cursor:pointer;
+}
+span.seta-filtros{
+    transform: rotate(90deg);
+    text-indent: 0px;
+    right: 0%;
+}
+#seta-top{
+    display: none;
+}
+#filtro-text{
+    width: 70%;
+    padding: 5px;
+    top: 0%;
+    left: 200%;
+    transform: translate(-25%, 45%);
+    position: absolute;
+}
+#filtro-text input{
+    height: 1.8em;
+    border-radius: 5px;
+}
+/*Conteudo ==========================================*/
+#conteudo{
+    margin-top: 50px;
+    width: 70%;
+}
+#conteudo ul{
+    max-width: 1000px;
+}
+#conteudo ul > li{
+    max-width: 250px;
+    max-height: 500px;
+    flex: 1 1 250px;
+}
+#conteudo li p{
+    margin: 10px 0px;
+    font-size:1.2em;
+}
+#conteudo li .preco{
+    font-size: 2em;
+}

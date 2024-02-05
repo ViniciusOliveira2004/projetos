@@ -5,41 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/mobile-first/mobile-first.css" media="screen">
     <link rel="stylesheet" href="estilos/mobile-first/mobile-first-sobre.css" media="screen">
+    <link rel="stylesheet" href="estilos/medium/mediumdevices.css" media="screen and (min-width: 768px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="estilos/medium/mediumdevicesobre.css" media="screen and (min-width: 768px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="estilos/large/largedevices-sobre.css" media="screen and (min-width: 1200px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Sol Modas - Juatuba</title>
 </head>
-<body>
+<body onresize="Redimencionar()">
     <div id = "fundo" onclick="ClicouMenu()"></div>
     <header>
         <div>
             <span class="material-symbols-outlined" id="menu" onclick="ClicouMenu()">menu</span>
-            <a href="index.html"><h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1></a>
+            <a href="index.html" id="titulo"><h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1></a>
             <a href="login.html"><span class="material-symbols-outlined" id="conta">account_circle</span></a>
         </div>
         <nav id="Nav">
             <div>
-                <a href="#" onclick="ClicouProdutos()">Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="#" id="buttomProdutos" onclick="ClicouProdutos()">Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
                 <nav id="produtos2">
                     <a href="roupas.html">Roupas</a>
                     <a href="acessorios.html">Acessórios</a>
                 </nav>
-                <a href="">Sobre nós</a>
                 <a onclick="MoverPage()">Fale Conosco</a>
             </div>
             <a href="login.html" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
+        </nav>
+        <nav id="produtos2-absolute" onclick="ClicouProdutos()">
+            <a href="roupas.html">Roupas</a>
+            <a href="acessorios.html">Acessórios</a>
         </nav>
     </header>
     <main>
         <section>
             <h2>Sobre nós</h2>
             <p> A loja Sol Modas começou nos fundos de uma casa em Juatuba-MG, que com o passar dos anos foi se desenvolvendo e melhorando tanto seus produtos como o próprio estabelecimento, tornando-se referência na cidade.</p>
-            <p> Contudo, algo que nunca foi deixado de lado foi a qualidade dos produtos, que apesar de não possuírem grande número no começo da história, sempre eram escolhidos a dedo para agradar ao máximo os clientes. </p>
-            <p> além disso, os funcionários que já trabalharam e trabalham na Sol Modas sempre foram instruídos à sempre fornecerem o melhor atendimento ao cliente.</p>
+            <p> Contudo, algo que nunca foi deixado de lado foi a qualidade dos produtos, que apesar de não possuírem grande número no começo, sempre eram escolhidos a dedo para agradar ao máximo os clientes. </p>
+            <p> Além disso, os funcionários que já trabalharam e trabalham na Sol Modas sempre foram instruídos à sempre fornecerem o melhor atendimento ao cliente.</p>
         </section>
         <section>
-            <img src="" alt="">
-            <p> Solange Aparecida Oliveira & Aloisio de Oliveira | Fundaram Sol Modas em xx/xx/xxxx </p>
+            <img src="images/loja-foto.jpeg" alt="">
+            <p> Solange Aparecida Oliveira & Aloisio de Oliveira | Fundaram Sol Modas em 2011 </p>
         </section>
     </main>
 </body>

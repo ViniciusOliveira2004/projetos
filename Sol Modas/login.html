@@ -5,37 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/mobile-first/mobile-first.css" media="screen">
     <link rel="stylesheet" href="estilos/mobile-first/mobile-first-login.css" media="screen">
-    
+    <link rel="stylesheet" href="estilos/medium/mediumdevices.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+    <link rel="stylesheet" href="estilos/medium/mediumdevices-login.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+    <link rel="stylesheet" href="estilos/large/largedevices-login.css" media="screen and (min-width: 992px)">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Sol Modas-Login</title>
 </head>
-<body>
+<body onresize="Redimencionar()">
     <div id = "fundo" onclick="ClicouMenu()"></div>
     <header>
         <div>
             <span class="material-symbols-outlined" id="menu" onclick="ClicouMenu()">menu</span>
-            <a href="index.html"><h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1></a>
+            <a href="index.html" id="titulo"><h1>SOL MODAS <span id="sol" class="material-symbols-outlined">brightness_7</span></h1></a>
             <a href="login.html"><span class="material-symbols-outlined" id="conta">account_circle</span></a>
         </div>
         <nav id="Nav">
             <div>
-                <a href="#" onclick="ClicouProdutos()">Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
-                <nav id="produtos2" >
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="#" id="buttomProdutos" onclick="ClicouProdutos()">Produtos <span class="material-symbols-outlined" id="left">arrow_back_ios</span></a>
+                <nav id="produtos2">
                     <a href="roupas.html">Roupas</a>
                     <a href="acessorios.html">Acessórios</a>
                 </nav>
-                <a href="">Sobre nós</a>
-                <a href="">Fale Conosco</a>
+                <a onclick="MoverPage()">Fale Conosco</a>
             </div>
-            <a href="" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
+            <a href="login.html" id="login">Login <span class="material-symbols-outlined" id="circle">account_circle</span></a>
         </nav>
+        <nav id="produtos2-absolute" onclick="ClicouProdutos()">
+            <a href="roupas.html">Roupas</a>
+            <a href="acessorios.html">Acessórios</a>
+        </nav>
+        <!--<span class="material-symbols-outlined" id="X">cancel</span> -->
+            
+        
     </header>
     <main>
         <section id="container-login">
             <div id="login-form">
                 <h2>Login</h2>
-                <p> Bem vindo novamente!!<br>
+                <p> <span>Bem vindo novamente!!</span>
                     Para ter acesso exclusivo aos nossos produtos faça Login
                 </p>
                 <form>

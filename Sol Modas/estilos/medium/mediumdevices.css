@@ -14,26 +14,34 @@
 @media only screen and (min-width: 1200px) {...}*/
 /*CABEÇALHO ==================================*/
 header{
-    z-index: 19;
     position: relative;
 }
+header #conta{
+    font-size:3em;
+    margin-top: 10px;
+    width: auto;
+}
+header #sol{
+    font-size: 1em;
+}
 header h1{
-    margin-left: 30px;
+    font-size:3em;
+    margin-left: 20px;
 }
 header #menu{
     display: none;
 }
 header #Nav{
-    z-index: 19;
     left: 0%;
     top: 0%;
+    margin: auto;
     height: auto;
     width: auto;
-    min-width: none;
+    min-width: auto;
     max-width: 100vw;
-    transition: all 0.5s;
+    transition: all 0s;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     overflow-x: hidden;
     overflow-y: auto;
@@ -44,48 +52,66 @@ header #Nav{
 }
 
 header #Nav > div{
-    z-index: 19;
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
     flex-direction: row;
-    position: relative;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
-header #produtos2{
+#buttomProdutos{
     background-color: var(--cor1);
-    border-radius: 10px;
+    color: var(--cor5);
+}
+#buttomProdutos:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+#left{
+    color: var(--cor5);
+}
+#produtos2{
+    display: none;
+}
+header #produtos2-absolute{
+    display: block;
+    background-color: var(--cor3);
+    border-radius: 0px 0px 10px 10px;
+    box-sizing: border-box;
     z-index: 20;
-    padding: 10px;
+    margin: auto;
+    padding: 0px;
     position: absolute;
     white-space: wrap;
-    overflow-y: auto;
-    transition: all 0.5s;
-    max-height: none;
-    height:auto;
-    width: auto;
+    overflow-y: hidden;
+    transition: max-height 0.5s;
+    max-height: 0px;
+    height: auto;
+    width: 160px;
+    left: 50%;
+    transform: translate(-50%,-5%);
 }
-
-#produtos2 > a{
+#produtos2-absolute > a{
     display: flex;
     align-items: center;
     background-color: var(--cor1);
     position:relative;
     padding: 10px;
     text-decoration: none;
-    font-size: 3vh;
+    font-size: 1.5em;
     transition: all 0.5s;
     height: 5vh;
-    width: 100%;
-    margin: 2px 0px;
+    width: 90%;
+    margin: 10px auto;
     text-indent: 0px;
     color: var(--cor5);
     border-radius: 10px;
-    border: 2px solid var(--cor2);
+    border: none;
 }
-#produtos2 > a:hover{
-    background-color: var(--cor3);
+#produtos2-absolute > a:hover{
+    color: var(--cor1);
+    background-color: var(--cor4);
     
 }
 header nav a{
@@ -95,28 +121,37 @@ header nav a{
     position: relative;
     text-decoration: none;
     transition: all 0.5s;
-    font-size: 3vh;
-    height: 6vh;
-    width: 200px;
+    font-size: 1.5em;
+    height: 50px;
+    width: 160px;
     white-space:nowrap;
-    margin: 0px 10px;
+    margin: 5px 10px;
     color: var(--cor5);
     border-radius: 10px;
-    border: 2px solid var(--cor2);
+    background-color: var(--cor1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+#Nav #left{
+    font-size: 0.8em;
+    transform: rotate(-90deg);
+    color: var(--cor5);
+    transition: 0.3s;
 }
 header nav a:hover{
-    background-color: var(--cor5);
+    background-color: var(--cor3);
+    color: var(--cor2);
 }
 header nav #login{
     position: absolute;
     display: none;
 }
 header > #div-bar{
-    height: 30px;
+    height: 35px;
     width: 300px;
     position: absolute;
     right: 80px;
-    top: 22px;
+    top: 26px;
 }
 header #div-bar > span{
     color: white;
@@ -201,12 +236,13 @@ footer #call{
     font-size: 2.5vh;
 }
 footer li{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 footer img{
     width: 0.8em;
 }
 footer section{
+    padding: 20px;
     flex: none;
     width: auto;
     max-width: 370px;

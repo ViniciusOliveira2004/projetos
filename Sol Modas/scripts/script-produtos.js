@@ -1,11 +1,46 @@
 const listagenero = document.querySelectorAll('#genero > ul > li > label > input')
 const listatamanho = document.querySelectorAll('#tam > ul > li > input')
 const conteudo = document.querySelectorAll('#conteudo > ul > li')
+
+const genero = document.getElementById('genero')
+const generoh3 = document.getElementById('h3genero')
+const setagenero = document.getElementById('sg')
+
+const tamanho = document.getElementById('tam')
+const tamanhoh3 = document.getElementById('h3tamanho')
+const setatamanho = document.getElementById('sta')
+
+const tipo = document.getElementById('tipo')
+const tipoh3 = document.getElementById('h3tipo')
+const setatipo = document.getElementById('sti')
+
+generoh3.addEventListener('click', MostrarGenero())
+tamanhoh3.addEventListener('click', MostrarTamanho())
+tipoh3.addEventListener('click', MostrarTipo())
+
 let masc  = document.getElementById('masc')
 let fem  = document.getElementById('fem')
 let inf  = document.getElementById('inf')
 let todos = document.getElementById('todos')
 let select = ''
+
+function RedimencionarProdutos(){
+    if(window.innerWidth >= 768){
+        genero.style.maxHeight = '50vh'
+        generoh3.style.borderRadius = '10px 10px 0px 0px'
+        tamanho.style.maxHeight = '50vh'
+        tamanhoh3.style.borderRadius = '10px 10px 0px 0px'
+        tipo.style.maxHeight = '50vh'
+        tipoh3.style.borderRadius = '10px 10px 0px 0px'
+    } else{
+        genero.style.maxHeight = '0vh'
+        generoh3.style.borderRadius = '10px'
+        tamanho.style.maxHeight = '0vh'
+        tamanhoh3.style.borderRadius = '10px'
+        tipo.style.maxHeight = '0vh'
+        tipoh3.style.borderRadius = '10px'
+    }
+}
 window.onload = SelecionaTipo() 
 function SelecionaTipo(){
     for(let type of listagenero){
@@ -55,74 +90,74 @@ function Desmarca(lista){
     for(let element of lista){
         element.checked = 0
     }
-
 }
 function MostrarFiltros(){
-    const filtro = document.getElementById('filtro')
-    const setatop = document.getElementById('seta-top')
-    if(filtro.style.maxHeight == '0vh'){
-        filtro.style.maxHeight = '100vh'
-        filtro.style.paddingBottom = '10px'
-        setatop.style.transform = 'rotate(-90deg)'
-    } else{
-        filtro.style.maxHeight = '0vh'
-        filtro.style.padding = '0px'
-        setatop.style.transform = 'rotate(90deg)' 
+    if(window.innerWidth < 1200){
+        const filtro = document.getElementById('filtro')
+        const setatop = document.getElementById('seta-top')
+        const botoes = document.getElementById('buttons')
+        if(filtro.style.maxHeight == 'none'){
+            filtro.style.maxHeight = '0vh'
+            filtro.style.padding = '0px'
+            botoes.style.display = 'none'
+            setatop.style.transform = 'rotate(90deg)' 
+        } else{
+            filtro.style.maxHeight = 'none'
+            filtro.style.paddingBottom = '10px'
+            botoes.style.display = 'flex'
+            setatop.style.transform = 'rotate(-90deg)'
+        }
     }
 }
 function MostrarGenero(){
-    const genero = document.getElementById('genero')
-    const generoh3 = document.getElementById('h3genero')
-    const setagenero = document.getElementById('sg')
-    if(genero.style.maxHeight == '50vh'){
-        genero.style.maxHeight = '0vh'
-        generoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
-        generoh3.style.borderRadius = '10px'
-        generoh3.style.borderBottom = '0px solid var(--cor2)'
-        setagenero.style.transform = 'rotate(-90deg)'
-    } else{
-        genero.style.maxHeight = '50vh'
-        generoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
-        generoh3.style.borderRadius = '10px 10px 0px 0px'
-        generoh3.style.borderBottom = '1px solid var(--cor2)'
-        setagenero.style.transform = 'rotate(90deg)'
+    if(window.innerWidth < 768 || window.innerWidth >= 1200){
+        if(genero.style.maxHeight == '50vh'){
+            genero.style.maxHeight = '0vh'
+            generoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
+            generoh3.style.borderRadius = '10px'
+            generoh3.style.borderBottom = '0px solid var(--cor2)'
+            setagenero.style.transform = 'rotate(-90deg)'
+        } else{
+            genero.style.maxHeight = '50vh'
+            generoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
+            generoh3.style.borderRadius = '10px 10px 0px 0px'
+            generoh3.style.borderBottom = '1px solid var(--cor2)'
+            setagenero.style.transform = 'rotate(90deg)'
+        }
     }
 }
 function MostrarTamanho(){
-
-    const tamanho = document.getElementById('tam')
-    const tamanhoh3 = document.getElementById('h3tamanho')
-    const setatamanho = document.getElementById('sta')
-    if(tamanho.style.maxHeight == '50vh'){
-        tamanho.style.maxHeight = '0vh'
-        tamanhoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
-        tamanhoh3.style.borderRadius = '10px'
-        tamanhoh3.style.borderBottom = '0px solid var(--cor2)'
-        setatamanho.style.transform = 'rotate(-90deg)'
-    } else{
-        tamanho.style.maxHeight = '50vh'
-        tamanhoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
-        tamanhoh3.style.borderRadius = '10px 10px 0px 0px'
-        tamanhoh3.style.borderBottom = '1px solid var(--cor2)'
-        setatamanho.style.transform = 'rotate(90deg)'
+    if(window.innerWidth < 768 || window.innerWidth >= 1200){
+        if(tamanho.style.maxHeight == '50vh'){
+            tamanho.style.maxHeight = '0vh'
+            tamanhoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
+            tamanhoh3.style.borderRadius = '10px'
+            tamanhoh3.style.borderBottom = '0px solid var(--cor2)'
+            setatamanho.style.transform = 'rotate(-90deg)'
+        } else{
+            tamanho.style.maxHeight = '50vh'
+            tamanhoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
+            tamanhoh3.style.borderRadius = '10px 10px 0px 0px'
+            tamanhoh3.style.borderBottom = '1px solid var(--cor2)'
+            setatamanho.style.transform = 'rotate(90deg)'
+        }
     }
 }
 function MostrarTipo(){
-    const tipo = document.getElementById('tipo')
-    const tipoh3 = document.getElementById('h3tipo')
-    const setatipo = document.getElementById('sti')
-    if(tipo.style.maxHeight == '50vh'){
-        tipo.style.maxHeight = '0vh'
-        tipoh3.style.borderRadius = '10px'
-        tipoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
-        tipoh3.style.borderBottom = '0px solid var(--cor2)'
-        setatipo.style.transform = 'rotate(-90deg)'
-    } else{
-        tipo.style.maxHeight = '50vh'
-        tipoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
-        tipoh3.style.borderRadius = '10px 10px 0px 0px'
-        tipoh3.style.borderBottom = '1px solid var(--cor2)'
-        setatipo.style.transform = 'rotate(90deg)'
+    if(window.innerWidth < 768 || window.innerWidth >= 1200){
+        if(tipo.style.maxHeight == '50vh'){
+            tipo.style.maxHeight = '0vh'
+            tipoh3.style.borderRadius = '10px'
+            tipoh3.style.transition = 'border-radius 1.2s, border-bottom 0.3s'
+            tipoh3.style.borderBottom = '0px solid var(--cor2)'
+            setatipo.style.transform = 'rotate(-90deg)'
+        } else{
+            tipo.style.maxHeight = '50vh'
+            tipoh3.style.transition = 'border-radius 0.1s, border-bottom 0.3s'
+            tipoh3.style.borderRadius = '10px 10px 0px 0px'
+            tipoh3.style.borderBottom = '1px solid var(--cor2)'
+            setatipo.style.transform = 'rotate(90deg)'
+        }
     }
 }
 function LimpaFiltros(){
@@ -180,9 +215,6 @@ function FiltrarPor(){
             break
         }
     }
-    console.log(select)
-    let listatipo = document.querySelectorAll(`#${select} > ul > li > input`)
-    console.log(listatipo)
     //Filtrando Tamanho
     let marcado = []
     for(elemento of listatamanho){
@@ -195,8 +227,9 @@ function FiltrarPor(){
     }
     //Filtrar Tipo de Roupa
     marcado = []
-    console.log(marcado)
-    for(elemento of listatipo){
+    let listatiposelecionado = document.querySelectorAll(`#${select} > ul > li > input`)
+    console.log(listatiposelecionado)
+    for(elemento of listatiposelecionado){
         if(elemento.checked){
             console.log(elemento.className)
             marcado.push(elemento.className)

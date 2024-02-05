@@ -15,7 +15,7 @@
 :root{
     --font1: 'Titulo';
     --font2: 'Corpo';
-    --font3: 'Padrão';
+    --font3: 'Padrao';
     --cor1: #FFF4E5;
     --cor2: #F5D6A1;
     --cor3: #99794D;
@@ -39,6 +39,7 @@ h2{
 body, html{
     height: 100vh;
     width: 100vw;
+    scroll-behavior: smooth;
     font-family: 'Padrao';
     overflow-x: hidden;
 }
@@ -46,6 +47,7 @@ header{
     color: var(--cor5);
     background-color: var(--cor2);
     padding: 10px;
+    height: auto;
     border-bottom: 2px solid var(--cor3);
 }
 header > div{
@@ -72,6 +74,7 @@ header input{
     width: 85%;
     font-size: 1em;
     padding: 2px;
+    border: none;
     border-radius: 5px;
 }
 header h1 {
@@ -125,10 +128,20 @@ header #Nav{
     border-right: 2px solid var(--cor4);
     background-color: var(--cor1);
 }
+.clicked{
+    background-color: var(--cor3);
+    border: none;
+}
+.clicked:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+    border: none;
+}
 header nav a{
     display: flex;
     align-items: center;
     padding: 10px;
+    cursor: pointer;
     position: relative;
     text-decoration: none;
     transition: all 0.5s;
@@ -190,6 +203,9 @@ header #produtos2{
     border-radius: 10px;
     border: 2px solid var(--cor2);
 }
+#produtos2-absolute{
+    display: none;
+}
 #Nav #left{
     border-radius: 50%;
     position: absolute;
@@ -212,6 +228,7 @@ header #produtos2{
 /*==============================================*/
 main > section a{
     background-color: var(--cor4);
+    font-family: var(--font3);
     text-decoration: none;
     color: var(--cor1);
     border-radius: 10px;
@@ -288,6 +305,7 @@ section a:hover{
 #vendidos > ul{
     display: flex;
     width: 95%;
+    max-width: 500px;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
@@ -298,7 +316,7 @@ section a:hover{
     border-radius: 10px;
     background-color: var(--cor1);
     flex: 1 1 40%;
-    max-width: 40%;
+    max-width: 200px;
     text-align: center;
     margin: 10px;
     display: block;
@@ -401,7 +419,7 @@ footer img{
 footer section{
     background-color: var(--cor3);
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     flex: 1 1 6vh;
     text-align: left;
     list-style-position: inside;
@@ -477,10 +495,10 @@ footer section{
         max-width: 35%;
     }
     #vendidos li p{
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
     #vendidos li .preco{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     aside{
         height: 40vw;

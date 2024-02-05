@@ -1,0 +1,74 @@
+header h1, header #conta{
+    font-size:4em;
+}
+header #sol{
+    font-size: 1em;
+}
+header #menu{
+    display: block;
+    visibility: collapse;
+}
+#seta-top{
+    font-size: 1em;
+    transform: rotate(-90deg);
+}
+#filtro{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filtro-content{
+    margin: 0px 5px;
+    display: inline-block;
+    width: 200px;
+}
+main{
+    max-width: 800px;
+}
+#section-filtro > #menus{
+    height: 100px;
+}
+#section-filtro > #menus > a{
+    height: 50px;
+}
+#genero, #tam, #tipo{
+    display: block;
+    height: auto;
+    max-height: 50vh;
+    height: 200px;
+    overflow-y: auto;
+    margin: 0px auto;
+    width: 200px;
+}
+h3{
+    justify-content: center;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    text-indent: 0px;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+    width: 200px;
+    cursor:default;
+}
+span.seta-filtros{
+    display: none;
+}
+.botao-filtro{
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 10px 15px 10px;
+    transition: 0.3s;
+}
+.botao-filtro:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+
+#conteudo > ul{
+    max-width: 768px;
+}
+#conteudo > ul > li{
+    height: 400px;
+    max-width: 200px;
+    flex: 1 1 200px;
+}

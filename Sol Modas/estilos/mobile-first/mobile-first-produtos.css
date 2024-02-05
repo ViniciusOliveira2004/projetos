@@ -1,17 +1,31 @@
 *{
     list-style-type: none;
 }
+main{
+    width: 98%;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 2px solid var(--cor1);
+}
 #section-filtro{
     background-color: var(--cor2);
     padding-bottom: 1vh;
     height: auto;
+    border-radius: 20px 20px 0px 0px;
 }
 #section-filtro > #menus{
-    background-color: var(--cor3);
+    background-color: var(--cor5);
     display: flex;
     align-items: center;
     box-shadow:0px 2px 5px rgba(0, 0, 0, 0.500);
     justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+}
+#section-filtro > #menus > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
 }
 #section-filtro a{
     font-size: 1.5em;
@@ -39,11 +53,17 @@
     padding: 0px;
     max-height: 100vh;
 }
-
+.filtro-content{
+    width: 100%;
+    padding-bottom: 5px;
+    margin: auto;
+}
 #genero, #tam, #tipo{
     height: auto;
     max-height: 0vh;
-    overflow-y: hidden;
+    overflow-y: auto;
+    max-width: 400px;
+    margin: auto;
     transition: 0.3s;
     background-color: var(--cor1);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
@@ -63,22 +83,24 @@ h3{
     align-items: center;
     justify-content: space-between;
     color: var(--cor3);
-    margin-top:1vh;
+    margin:1vh auto 0vh auto;
     background-color: var(--cor1);
     border-radius: 10px;
     width: 70%;
-    height: 5vh;
+    max-width: 400px;
+    height: 7vh;
+    max-height: 40px;
     cursor: pointer;
     text-indent: 1vh;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
 }
 #seta-top{
     transform: rotate(-90deg);
-    transform-origin:center center;
+    transform-origin: center center;
     transition: 0.2s;
     margin-left: 0.5vh;
     border-radius: 50%;
-    font-size: 0.6em;
+    font-size: 1em;
     color: var(--cor4);
 }
 #masc, #inf, #fem{
@@ -96,14 +118,18 @@ span.seta-filtros{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
-    width: 70%;
+    overflow-y: hidden;
+    height: 70px;
+    margin: 0px auto 10px auto;
+    width: 100%;
 }
 .botao-filtro{
     padding: 1vh;
     border-radius: 10px;
-    color: var(--cor5);
-    background-color: var(--cor1);
+    font-size: 1em;
+    font-family: var(--font3);
+    color: var(--cor2);
+    background-color: var(--cor4);
     border: none;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.300);
@@ -111,8 +137,8 @@ span.seta-filtros{
     transition: 0.3s;
 }
 .botao-filtro:hover{
-    background-color: var(--cor4);
-    color: var(--cor1);
+    background-color: var(--cor3);
+    color: var(--cor2);
 }
 input[type = checkbox], input[type = radio]{
     white-space:nowrap;
@@ -129,6 +155,7 @@ label{
     background-color: var(--cor4);
     margin: auto;
     width: 70%;
+    max-width: 300px;
     padding: 0.5vh;
     border-radius: 10px;
 }
@@ -141,7 +168,7 @@ label{
 }
 #conteudo > ul{
     display: flex;
-    max-width: 450px;
+    max-width: 500px;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
@@ -190,7 +217,7 @@ label{
         max-height: 100vw;
     }
     h3{
-        height: 5vw;
+        height: 40px;
         min-height: 30px;
         max-height: 40px;
         margin-top: 5px;
@@ -199,7 +226,7 @@ label{
         font-size: 0.8em;
     }
     .botao-filtro{
-        padding: 1vw;
+        padding: 5px;
         margin: 2vw 1vw 0vh 1vw;
     }
     #filtro-text{
@@ -208,11 +235,11 @@ label{
     }
     #conteudo > ul > li{
         height: 40vw;
-        flex: 1 1 35%;
-        max-width: 35%;
+        flex: 1 1 40%;
+        max-width: 40%;
     }
     #conteudo li p{
-        font-size: 0.6em;
+        font-size: 1em;
     }
     #conteudo li .preco{
         font-size: 1em;
